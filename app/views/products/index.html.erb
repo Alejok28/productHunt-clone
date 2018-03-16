@@ -1,21 +1,26 @@
 <div class="container">
-	<h1>Productos</h1>
-	<div class="text-right">
-		<%= link_to "Nuevo product", new_product_path, class:"btn btn-primary" %>
+	<div class="row">
+		<div class="col-sm-12">
+			<h1>Productos</h1>
+			<div class="text-right">
+				<%= link_to "Nuevo product", new_product_path, class:"btn btn-primary" %>
+			</div>
+			<table class="table">
+				<tr>
+					<th>Nombre</th>
+					<th>URL</th>
+					<th>Description</th>
+					<th></th>
+				</tr>
+				<% @products.each do |product| %>
+					<tr>
+						<td><%= link_to product.name, product %></td>
+						<td><%= product.url %></td>
+						<td><%= product.description %></td>
+						<td><%= link_to "Editar",edit_product_path(product) %></td>
+					</tr>
+				<% end %>
+			</table>
+		</div>
 	</div>
-	<table class="table">
-		<tr>
-			<th>Nombre</th>
-			<th>URL</th>
-			<th>Description</th>
-		</tr>
-		<% @products.each do |product| %>
-			<tr>
-				<td><%= product.name %></td>
-				<td><%= product.url %></td>
-				<td><%= product.description %></td>
-				<td><%= link_to 'Mostrar', product%></td>
-			</tr>
-		<% end %>
-	</table>
 </div>
