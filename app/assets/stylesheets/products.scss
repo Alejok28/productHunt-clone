@@ -1,3 +1,86 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.products {
+  margin-top: 40px;
+
+  .product {
+    padding: 15px 10px;
+    border-radius: 5px;
+
+    &:hover{ background: #f5f5f2; }
+
+    .product-details {
+      float: left;
+
+      .product-title a {
+        color: #303030;
+        font-size: 21px;
+        line-height: 1;
+
+        &:hover, &:focus { color: #F04500; text-decoration: none; }
+      }
+      .product-description {
+        display: block;
+        color: #999;
+        font-size: 16px;
+      }
+    }
+  }
+}
+.product-page {
+  .product-header {
+    background: #303030;
+    color: #fafaf2;
+    text-align: center;
+    padding: 100px 25px;
+    margin-top: -20px;
+    margin-bottom: 30px;
+
+    h1 {
+      font-size: 32px;
+      margin-top: 0;
+    }
+
+    p {
+      font-size: 18px;
+      color: #ddd;
+      margin-top: 15px;
+      margin-bottom: 40px;
+    }
+
+    .btn-primary {
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }
+
+  .votes {
+    margin-bottom: 40px;
+    padding: 0 25px;
+
+    h2 {
+      color: #666;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    img { width: 40px; }
+  }
+
+  .comments {
+    padding: 0 25px;
+
+    h2 {
+      color: #666;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    img {
+      width: 25px;
+      margin: -3px 10px 0 -3px;
+    }
+  }
+}
