@@ -1,0 +1,358 @@
+es:
+  activerecord:
+    attributes:
+      user:
+        confirmation_sent_at: Fecha de envío de confirmación
+        confirmation_token: Código de confirmación
+        confirmed_at: Fecha de confirmación
+        created_at: Fecha de creación
+        current_password: Contraseña actual
+        current_sign_in_at: Fecha del ingreso actual
+        current_sign_in_ip: IP del ingreso actual
+        email: Email
+        encrypted_password: Contraseña cifrada
+        failed_attempts: Intentos fallidos
+        last_sign_in_at: Fecha del último ingreso
+        last_sign_in_ip: IP del último ingreso
+        locked_at: Fecha de bloqueo
+        password: Contraseña
+        password_confirmation: Confirmación de la contraseña
+        remember_created_at: Fecha de 'Recordarme'
+        remember_me: Recordarme
+        reset_password_sent_at: Fecha de envío de código para contraseña
+        reset_password_token: Código para restablecer contraseña
+        sign_in_count: Cantidad de ingresos
+        unconfirmed_email: Email no confirmado
+        unlock_token: Código de desbloqueo
+        updated_at: Fecha de actualización
+      product:
+        name: "Nombre"
+        description: "Descripción"
+    models:
+      user: Usuario
+  devise:
+    confirmations:
+      confirmed: Tu cuenta ha sido confirmada satisfactoriamente.
+      new:
+        resend_confirmation_instructions: Reenviar instrucciones de confirmación
+      send_instructions: Vas a recibir un correo con instrucciones sobre cómo confirmar tu cuenta en unos minutos.
+      send_paranoid_instructions: Si tu correo existe en nuestra base de datos, en unos minutos recibirás un correo con instrucciones sobre cómo confirmar tu cuenta.
+    failure:
+      already_authenticated: Ya has iniciado sesión.
+      inactive: Tu cuenta aún no ha sido activada.
+      invalid: "%{authentication_keys} o contraseña inválida."
+      last_attempt: Tienes un intento más antes de que tu cuenta sea bloqueada.
+      locked: Tu cuenta está bloqueada.
+      not_found_in_database: "%{authentication_keys} o contraseña inválida."
+      timeout: Tu sesión expiró. Por favor, inicia sesión nuevamente para continuar.
+      unauthenticated: Tienes que iniciar sesión o registrarte para poder continuar.
+      unconfirmed: Tienes que confirmar tu cuenta para poder continuar.
+    mailer:
+      confirmation_instructions:
+        action: Confirmar mi cuenta
+        greeting: "¡Bienvenido %{recipient}!"
+        instruction: 'Usted puede confirmar el correo electrónico de su cuenta a través de este enlace:'
+        subject: Instrucciones de confirmación
+      email_changed:
+        greeting:
+        message:
+        subject:
+      password_change:
+        greeting: Hola %{recipient}!
+        message: Le estamos contactando para notificarle que su contraseña ha sido cambiada.
+        subject: Contraseña cambiada
+      reset_password_instructions:
+        action: Cambiar mi contraseña
+        greeting: "¡Hola %{recipient}!"
+        instruction: Alguien ha solicitado un enlace para cambiar su contraseña, lo que se puede realizar a través del siguiente enlace.
+        instruction_2: Si usted no lo ha solicitado, por favor ignore este correo electrónico.
+        instruction_3: Su contraseña no será cambiada hasta que usted acceda al enlace y cree una nueva.
+        subject: Instrucciones de recuperación de contraseña
+      unlock_instructions:
+        action: Desbloquear mi cuenta
+        greeting: "¡Hola %{recipient}!"
+        instruction: 'Haga click en el siguiente enlace para desbloquear su cuenta:'
+        message: Su cuenta ha sido bloqueada debido a una cantidad excesiva de intentos infructuosos para ingresar.
+        subject: Instrucciones para desbloquear
+    omniauth_callbacks:
+      failure: No has sido autorizado en la cuenta %{kind} porque "%{reason}".
+      success: Has sido autorizado satisfactoriamente en la cuenta %{kind}.
+    passwords:
+      edit:
+        change_my_password: Cambiar mi contraseña
+        change_your_password: Cambie su contraseña
+        confirm_new_password: Confirme la nueva contraseña
+        new_password: Nueva contraseña
+      new:
+        forgot_your_password: "¿Ha olvidado su contraseña?"
+        send_me_reset_password_instructions: Envíeme las instrucciones para resetear mi contraseña
+      no_token: No puedes acceder a esta página si no es a través de un enlace para resetear tu contraseña. Si has llegado hasta aquí desde el email para resetear tu contraseña, por favor asegúrate de que la URL introducida está completa.
+      send_instructions: Recibirás un correo con instrucciones sobre cómo resetear tu contraseña en unos pocos minutos.
+      send_paranoid_instructions: Si tu correo existe en nuestra base de datos, recibirás un correo con instrucciones sobre cómo resetear tu contraseña en tu bandeja de entrada.
+      updated: Se ha cambiado tu contraseña. Ya iniciaste sesión.
+      updated_not_active: Tu contraseña fue cambiada.
+    registrations:
+      destroyed: "¡Adiós! Tu cuenta ha sido cancelada correctamente. Esperamos verte pronto."
+      edit:
+        are_you_sure: "¿Está usted seguro?"
+        cancel_my_account: Anular mi cuenta
+        currently_waiting_confirmation_for_email: 'Actualmente esperando la confirmacion de: %{email} '
+        leave_blank_if_you_don_t_want_to_change_it: dejar en blanco si no desea cambiarlo
+        title: Editar %{resource}
+        unhappy: Infeliz
+        update: Actualizar
+        we_need_your_current_password_to_confirm_your_changes: necesitamos su contraseña actual para confirmar los cambios
+      new:
+        sign_up: Registrarse
+      signed_up: Bienvenido. Tu cuenta fue creada.
+      signed_up_but_inactive: Tu cuenta ha sido creada correctamente. Sin embargo, no hemos podido iniciar la sesión porque tu cuenta aún no está activada.
+      signed_up_but_locked: Tu cuenta ha sido creada correctamente. Sin embargo, no hemos podido iniciar la sesión porque que tu cuenta está bloqueada.
+      signed_up_but_unconfirmed: Se ha enviado un mensaje con un enlace de confirmación a tu correo electrónico. Abre el enlace para activar tu cuenta.
+      update_needs_confirmation: Has actualizado tu cuenta correctamente, pero es necesario confirmar tu nuevo correo electrónico. Por favor, comprueba tu correo y sigue el enlace de confirmación para finalizar la comprobación del nuevo correo electrónico.
+      updated: Tu cuenta se ha actualizada.
+    sessions:
+      already_signed_out: Sesión finalizada.
+      new:
+        sign_in: Iniciar sesión
+      signed_in: Sesión iniciada.
+      signed_out: Sesión finalizada.
+    shared:
+      links:
+        back: Atrás
+        didn_t_receive_confirmation_instructions: "¿No ha recibido las instrucciones de confirmación?"
+        didn_t_receive_unlock_instructions: "¿No ha recibido instrucciones para desbloquear?"
+        forgot_your_password: "¿Ha olvidado su contraseña?"
+        sign_in: Iniciar sesión
+        sign_in_with_provider: Iniciar sesión con %{provider}
+        sign_up: Registrarse
+      minimum_password_length:
+        one: "(%{count} caractere como mínimo)"
+        other: "(%{count} caracteres como mínimo)"
+    unlocks:
+      new:
+        resend_unlock_instructions: Reenviar instrucciones para desbloquear
+      send_instructions: Vas a recibir instrucciones para desbloquear tu cuenta en unos pocos minutos.
+      send_paranoid_instructions: Si tu cuenta existe, vas a recibir instrucciones para desbloquear tu cuenta en unos pocos minutos.
+      unlocked: Tu cuenta ha sido desbloqueada. Ya puedes iniciar sesión.
+    errors:
+      messages:
+        already_confirmed: ya ha sido confirmada, por favor intenta iniciar sesión
+        confirmation_period_expired: necesita confirmarse dentro de %{period}, por favor solicita una nueva
+        expired: ha expirado, por favor solicita una nueva
+        not_found: no se ha encontrado
+        not_locked: no estaba bloqueada
+        not_saved:
+          one: 'Ocurrió un error al tratar de guardar %{resource}:'
+          other: 'Ocurrieron %{count} errores al tratar de guardar %{resource}:'
+        record_invalid: "La validación falló: %{errors}"
+        restrict_dependent_destroy:
+          has_one: No se puede eliminar el registro porque existe un %{record} dependiente
+          has_many: No se puede eliminar el registro porque existen %{record} dependientes
+  date:
+    abbr_day_names:
+    - dom
+    - lun
+    - mar
+    - mié
+    - jue
+    - vie
+    - sáb
+    abbr_month_names:
+    -
+    - ene
+    - feb
+    - mar
+    - abr
+    - may
+    - jun
+    - jul
+    - ago
+    - sep
+    - oct
+    - nov
+    - dic
+    day_names:
+    - domingo
+    - lunes
+    - martes
+    - miércoles
+    - jueves
+    - viernes
+    - sábado
+    formats:
+      default: "%d/%m/%Y"
+      long: "%A, %d de %B de %Y"
+      short: "%d de %b"
+    month_names:
+    -
+    - enero
+    - febrero
+    - marzo
+    - abril
+    - mayo
+    - junio
+    - julio
+    - agosto
+    - septiembre
+    - octubre
+    - noviembre
+    - diciembre
+    order:
+    - :day
+    - :month
+    - :year
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: cerca de 1 hora
+        other: cerca de %{count} horas
+      about_x_months:
+        one: cerca de 1 mes
+        other: cerca de %{count} meses
+      about_x_years:
+        one: cerca de 1 año
+        other: cerca de %{count} años
+      almost_x_years:
+        one: casi 1 año
+        other: casi %{count} años
+      half_a_minute: medio minuto
+      less_than_x_minutes:
+        one: menos de 1 minuto
+        other: menos de %{count} minutos
+      less_than_x_seconds:
+        one: menos de 1 segundo
+        other: menos de %{count} segundos
+      over_x_years:
+        one: más de 1 año
+        other: más de %{count} años
+      x_days:
+        one: 1 día
+        other: "%{count} días"
+      x_minutes:
+        one: 1 minuto
+        other: "%{count} minutos"
+      x_months:
+        one: 1 mes
+        other: "%{count} meses"
+      x_years:
+        one: 1 año
+        other: "%{count} años"
+      x_seconds:
+        one: 1 segundo
+        other: "%{count} segundos"
+    prompts:
+      day: Día
+      hour: Hora
+      minute: Minuto
+      month: Mes
+      second: Segundos
+      year: Año
+  errors:
+    format: "%{attribute} %{message}"
+    messages:
+      accepted: debe ser aceptado
+      blank: no puede estar en blanco
+      present: debe estar en blanco
+      confirmation: no coincide
+      empty: no puede estar vacío
+      equal_to: debe ser igual a %{count}
+      even: debe ser un número par
+      exclusion: está reservado
+      greater_than: debe ser mayor que %{count}
+      greater_than_or_equal_to: debe ser mayor o igual que %{count}
+      inclusion: no está incluido en la lista
+      invalid: es inválido
+      less_than: debe ser menor que %{count}
+      less_than_or_equal_to: debe ser menor o igual que %{count}
+      model_invalid: "La validación falló: %{errors}"
+      not_a_number: no es un número
+      not_an_integer: debe ser un entero
+      odd: debe ser un número impar
+      required: debe existir
+      taken: ya ha sido tomado
+      too_long:
+        one: es demasiado largo (máximo 1 caracter)
+        other: es demasiado largo (máximo %{count} caracteres)
+      too_short:
+        one: es demasiado corto (mínimo 1 caracter)
+        other: es demasiado corto (mínimo %{count} caracteres)
+      wrong_length:
+        one: longitud errónea (debe ser de 1 caracter)
+        other: longitud errónea (debe ser de %{count} caracteres)
+      other_than: debe ser distinto de %{count}
+    template:
+      body: 'Revise que los siguientes campos sean válidos:'
+      header:
+        one: "%{model} no pudo guardarse debido a 1 error"
+        other: "%{model} no pudo guardarse debido a %{count} errores"
+  helpers:
+    select:
+      prompt: Por favor selecciona
+    submit:
+      create: Crear %{model}
+      submit: Guardar %{model}
+      update: Actualizar %{model}
+  number:
+    currency:
+      format:
+        delimiter: ","
+        format: "%u%n"
+        precision: 0
+        separator: "."
+        significant: false
+        strip_insignificant_zeros: false
+        unit: "$"
+    format:
+      delimiter: ","
+      precision: 2
+      separator: "."
+      significant: false
+      strip_insignificant_zeros: false
+    human:
+      decimal_units:
+        format: "%n %u"
+        units:
+          billion: mil millones
+          million:
+            one: millón
+            other: millones
+          quadrillion: mil billones
+          thousand: mil
+          trillion:
+            one: billón
+            other: billones
+          unit: ''
+      format:
+        delimiter: ","
+        precision: 3
+        significant: true
+        strip_insignificant_zeros: true
+      storage_units:
+        format: "%n %u"
+        units:
+          byte:
+            one: Byte
+            other: Bytes
+          gb: GB
+          kb: KB
+          mb: MB
+          tb: TB
+    percentage:
+      format:
+        delimiter: ","
+        format: "%n%"
+    precision:
+      format:
+        delimiter: ","
+  support:
+    array:
+      last_word_connector: " y "
+      two_words_connector: " y "
+      words_connector: ", "
+  time:
+    am: am
+    formats:
+      default: "%a, %d de %b de %Y a las %H:%M:%S %Z"
+      long: "%A, %d de %B de %Y a las %I:%M %p"
+      short: "%d de %b a las %H:%M hrs"
+    pm: pm

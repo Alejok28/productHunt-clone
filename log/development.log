@@ -2152,3 +2152,94 @@ Processing by ProductsController#show as HTML
 Completed 200 OK in 3151ms (Views: 3145.9ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-03-17 09:24:49 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 572ms (Views: 554.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-03-17 09:24:52 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (38.0ms)
+Completed 200 OK in 120ms (Views: 96.6ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-03-17 09:24:57 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"60j7qcNMtIK2v/ADmCOhhZb5yigbVgqVo8Nw0A4KlSpGSq0h3IzHRw9rF4DIE/JC6Sc6n9Mhn3Pi42ivpxCgZg==", "user"=>{"email"=>"alejo_k28@hotmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "alejo_k28@hotmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 176ms (ActiveRecord: 0.9ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"60j7qcNMtIK2v/ADmCOhhZb5yigbVgqVo8Nw0A4KlSpGSq0h3IzHRw9rF4DIE/JC6Sc6n9Mhn3Pi42ivpxCgZg==", "user"=>{"email"=>"alejo_k28@hotmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 218ms (Views: 69.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-03-17 09:25:06 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ooEx0Lf4DZ1XPz6Tf7OEkGTlNbjGQT230ENX8FwAJZyAuu2dV4ZF6zq8bNC3VJSeJBOItaHe+BAA2//WnXz99g==", "user"=>{"email"=>"alejo_k28@hotmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "alejo_k28@hotmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2018-03-17 14:25:06.372342"], ["sign_in_count", 2], ["updated_at", "2018-03-17 14:25:06.373400"], ["id", 2]]
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 175ms (ActiveRecord: 4.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-17 09:25:06 -0500
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 109ms (Views: 105.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2018-03-17 09:25:14 -0500
+Processing by ProductsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (2.0ms)
+  Rendered products/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 86ms (Views: 78.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2018-03-17 09:25:23 -0500
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IO8YeQowuUpp1Idn5Y7ilsNtLy7ElRdgdNl8V6CScQorSQgKzfk/tWVUIufe0jpmu6UMGew2CvNq2tIOGslM8w==", "product"=>{"name"=>"Producto 3", "url"=>"www.producto3.com", "description"=>""}, "commit"=>"Publicar producto"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "products" ("name", "url", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Producto 3"], ["url", "www.producto3.com"], ["description", ""], ["created_at", "2018-03-17 14:25:23.127011"], ["updated_at", "2018-03-17 14:25:23.127011"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/products
+Completed 302 Found in 9ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-03-17 09:25:23 -0500
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (3.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 98ms (Views: 95.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/products/4" for 127.0.0.1 at 2018-03-17 09:25:26 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 87ms (Views: 73.0ms | ActiveRecord: 0.6ms)
+
+
