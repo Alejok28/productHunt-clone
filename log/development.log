@@ -2689,3 +2689,25 @@ Completed 200 OK in 95ms (Views: 91.2ms | ActiveRecord: 0.7ms)
 
 
   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/products/new" for 127.0.0.1 at 2018-03-17 09:48:28 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (11.0ms)
+  Rendered products/new.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 518ms (Views: 462.8ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2018-03-17 09:48:31 -0500
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cngGd6vxSVKIBwydnNh6W2KPwt2iANHXmTN2IQb7cV36MEsr5jrqGRFAntHpq7Ji8AUu/gKeHy3Ga87D9CskuQ==", "product"=>{"name"=>"", "url"=>"", "description"=>""}, "commit"=>"Publicar producto"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (2.5ms)
+  Rendered products/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 101ms (Views: 81.2ms | ActiveRecord: 0.4ms)
+
+
