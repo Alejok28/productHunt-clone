@@ -20,6 +20,24 @@
 
         <div class="comments">
           <h2>Comentarios</h2>
+          <% @product.comments.each do |comment| %>
+            <div class="panel panel-default">
+              <header class="panel-heading"><%= comment.user.email %></header>
+              <div class="panel-body"><%= comment.body %></div>
+            </div>
+          <% end %>
+
+          <% if signed_in? %>
+            <%= form_for [@product, @product.comments.build] do |f| %>
+              <div class="form-group">
+                <%= f.text_area :body, class: "form-control", placeholder: "Agregar comentario" %>
+              </div>
+
+              <div class="actions text-right">
+                <%= f.submit "Comentar", class: "btn btn-primary" %>
+              </div>
+            <% end %>
+          <% end %>
         </div>
       </div>
     </div>
