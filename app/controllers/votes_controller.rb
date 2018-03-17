@@ -1,4 +1,5 @@
 class VotesController < ApplicationController
+  before_action :authenticate_user!
   def create
     product = Product.find(params[:product_id])
     product.votes.create(user: current_user)
