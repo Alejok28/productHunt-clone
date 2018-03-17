@@ -11,6 +11,42 @@
 
     &:hover{ background: #f5f5f2; }
 
+    .product-upvote {
+      position: relative;
+      float: left;
+      text-align: center;
+      text-decoration: none;
+      margin-right: 20px;
+      padding: 5px 5px;
+      width: 35px;
+
+      .upvote-arrow {
+        border-bottom: 9px solid #534540;
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+        border-top: 9px solid transparent;
+        left: 10px;
+        position: absolute;
+        top: 0px;
+      }
+
+      .upvote-count {
+        display: block;
+        color: #303030;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 1;
+        margin-top: 18px;
+      }
+
+      &:hover .upvote-arrow { border-bottom-color: #F04500; }
+
+      &.upvote-active {
+        .upvote-arrow { border-bottom-color: #F04500; }
+        .upvote-count { color: #F04500; }
+      }
+    }
+
     .product-details {
       float: left;
 
