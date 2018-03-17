@@ -134,20 +134,6 @@ es:
       send_instructions: Vas a recibir instrucciones para desbloquear tu cuenta en unos pocos minutos.
       send_paranoid_instructions: Si tu cuenta existe, vas a recibir instrucciones para desbloquear tu cuenta en unos pocos minutos.
       unlocked: Tu cuenta ha sido desbloqueada. Ya puedes iniciar sesión.
-    errors:
-      messages:
-        already_confirmed: ya ha sido confirmada, por favor intenta iniciar sesión
-        confirmation_period_expired: necesita confirmarse dentro de %{period}, por favor solicita una nueva
-        expired: ha expirado, por favor solicita una nueva
-        not_found: no se ha encontrado
-        not_locked: no estaba bloqueada
-        not_saved:
-          one: 'Ocurrió un error al tratar de guardar %{resource}:'
-          other: 'Ocurrieron %{count} errores al tratar de guardar %{resource}:'
-        record_invalid: "La validación falló: %{errors}"
-        restrict_dependent_destroy:
-          has_one: No se puede eliminar el registro porque existe un %{record} dependiente
-          has_many: No se puede eliminar el registro porque existen %{record} dependientes
   date:
     abbr_day_names:
     - dom
@@ -250,6 +236,18 @@ es:
   errors:
     format: "%{attribute} %{message}"
     messages:
+      already_confirmed: ya ha sido confirmada, por favor intenta iniciar sesión
+      confirmation_period_expired: necesita confirmarse dentro de %{period}, por favor solicita una nueva
+      expired: ha expirado, por favor solicita una nueva
+      not_found: no se ha encontrado
+      not_locked: no estaba bloqueada
+      not_saved:
+        one: 'Ocurrió un error al tratar de guardar %{resource}:'
+        other: 'Ocurrieron %{count} errores al tratar de guardar %{resource}:'
+      record_invalid: "La validación falló: %{errors}"
+      restrict_dependent_destroy:
+        has_one: No se puede eliminar el registro porque existe un %{record} dependiente
+        has_many: No se puede eliminar el registro porque existen %{record} dependientes
       accepted: debe ser aceptado
       blank: no puede estar en blanco
       present: debe estar en blanco

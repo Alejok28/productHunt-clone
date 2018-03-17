@@ -3,6 +3,17 @@
 		<div class="col-sm-6 col-sm-offset-3">
 			<%= form_for @product do |f| %>
 				<h1><%= form_title %></h1>
+
+				<% if @product.errors.any? %>
+				  <div class="alert alert-danger">
+				    <ul>
+				    <% @product.errors.full_messages.each do |msg| %>
+				      <li><%= msg %></li>
+				    <% end %>
+				    </ul>
+				  </div>
+				<% end %>
+
 				<div class="form-group">
 					<%= f.text_field :name, class:"form-control", placeholder:"Ingresa el nombre"%>
 				</div>

@@ -1,3 +1,11 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "products";
+
+nav.navbar.navbar-default.navbar-static-top{
+	margin-bottom: 0 !important;
+}
+
+p.alert{
+	padding: 0 !important;
+}
