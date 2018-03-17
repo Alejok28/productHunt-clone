@@ -16,6 +16,11 @@
               <span class="upvote-count"><%= product.votes.count %></span>
             <% end %>
           <% end %>
+          <% if product.image.exists? %>
+            <div class="product-img">
+              <%= image_tag product.image.url(:thumb) %>
+            </div>
+          <% end %>
           <div class="product-details">
             <span class="product-title"><%= link_to product.name, product %></span>
             <span class="product-description"><%= product.description %></span>

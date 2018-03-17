@@ -24,6 +24,9 @@
 					<%= f.text_field :description, class:"form-control", placeholder:"Ingresa la descripción"%>
 				</div>
 				<div class="form-group">
+					<%= f.file_field :image%>
+				</div>
+				<div class="form-group">
 					<%= f.submit form_title, class:" form-control btn btn-primary" %>
 				</div>
 			<% end %>

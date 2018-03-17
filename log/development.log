@@ -4965,3 +4965,295 @@ Processing by ProductsController#show as HTML
 Completed 200 OK in 108ms (Views: 103.8ms | ActiveRecord: 0.9ms)
 
 
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddAttachmentImageToProducts (20180317184105)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddAttachmentImageToProducts (20180317184105)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddAttachmentImageToProducts (20180317184105)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddAttachmentImageToProducts (20180317184105)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddAttachmentImageToProducts (20180317184105)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddAttachmentImageToProducts (20180317184105)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddAttachmentImageToProducts (20180317184105)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "products" ADD "image_file_name" varchar[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "products" ADD "image_content_type" varchar[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "products" ADD "image_file_size" integer[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "products" ADD "image_updated_at" datetime[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180317184105"]]
+  [1m[35m (4.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_product_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_product_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_products_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_products_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_votes_on_product_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_votes_on_product_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_votes_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_votes_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/products/new" for 127.0.0.1 at 2018-03-17 14:00:41 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (15.2ms)
+  Rendered products/new.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 549ms (Views: 472.4ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2018-03-17 14:00:54 -0500
+Processing by ProductsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (1.6ms)
+  Rendered products/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 99ms (Views: 92.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2018-03-17 14:01:07 -0500
+Processing by ProductsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (1.4ms)
+  Rendered products/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 80ms (Views: 75.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-17 14:04:15 -0500
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mVote Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "votes" WHERE "votes"."product_id" = ? AND "votes"."user_id" = 2 LIMIT ?[0m  [["product_id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."product_id" = ?[0m  [["product_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 1]]
+  [1m[36mVote Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "votes" WHERE "votes"."product_id" = ? AND "votes"."user_id" = 2 LIMIT ?[0m  [["product_id", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."product_id" = ?[0m  [["product_id", 3]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 3]]
+  [1m[36mVote Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "votes" WHERE "votes"."product_id" = ? AND "votes"."user_id" = 2 LIMIT ?[0m  [["product_id", 4], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."product_id" = ?[0m  [["product_id", 4]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 4]]
+  [1m[36mVote Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "votes" WHERE "votes"."product_id" = ? AND "votes"."user_id" = 2 LIMIT ?[0m  [["product_id", 5], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."product_id" = ?[0m  [["product_id", 5]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 5]]
+  Rendered products/index.html.erb within layouts/application (75.6ms)
+Completed 200 OK in 143ms (Views: 134.5ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/products/5" for 127.0.0.1 at 2018-03-17 14:07:08 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."product_id" = ?[0m  [["product_id", 5]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 5]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered products/show.html.erb within layouts/application (42.8ms)
+Started GET "/products/5" for 127.0.0.1 at 2018-03-17 14:07:10 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."product_id" = ?[0m  [["product_id", 5]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 5]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered products/show.html.erb within layouts/application (37.5ms)
+Completed 200 OK in 5713ms (Views: 5685.1ms | ActiveRecord: 2.2ms)
+
+
+Completed 200 OK in 4148ms (Views: 4131.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/products/5" for 127.0.0.1 at 2018-03-17 14:07:14 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."product_id" = ?[0m  [["product_id", 5]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 5]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered products/show.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 172ms (Views: 159.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/products/5/edit" for 127.0.0.1 at 2018-03-17 14:07:17 -0500
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (1.9ms)
+  Rendered products/edit.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 116ms (Views: 96.8ms | ActiveRecord: 0.9ms)
+
+
+Started PATCH "/products/5" for 127.0.0.1 at 2018-03-17 14:07:22 -0500
+Processing by ProductsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lnTfg/CdgS36HOpSQn5Y2s950SkNUwdVBcLQx4L+hPbd8W2u2jg6OOP9lkJH2AMJ3SqSL4cUR+s5s1ebbqhryA==", "product"=>{"name"=>"Producto 4", "url"=>"www.producto4.com", "description"=>"Descripción del producto 4", "image"=>#<ActionDispatch::Http::UploadedFile:0x007fcc64e7cc68 @tempfile=#<Tempfile:/var/folders/p5/6dz05txn2_q7z9tdrqh6br140000gn/T/RackMultipart20180317-5856-g20o98.jpg>, @original_filename="car1.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"product[image]\"; filename=\"car1.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Modificar producto", "id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[paperclip] Trying to link /var/folders/p5/6dz05txn2_q7z9tdrqh6br140000gn/T/RackMultipart20180317-5856-g20o98.jpg to /var/folders/p5/6dz05txn2_q7z9tdrqh6br140000gn/T/84d7185d8f8e2f00efa64590f708ad6620180317-5856-t8qraa.jpg
+[paperclip] Trying to link /var/folders/p5/6dz05txn2_q7z9tdrqh6br140000gn/T/84d7185d8f8e2f00efa64590f708ad6620180317-5856-t8qraa.jpg to /var/folders/p5/6dz05txn2_q7z9tdrqh6br140000gn/T/84d7185d8f8e2f00efa64590f708ad6620180317-5856-15s2yyw.jpg
+Command :: file -b --mime '/var/folders/p5/6dz05txn2_q7z9tdrqh6br140000gn/T/84d7185d8f8e2f00efa64590f708ad6620180317-5856-15s2yyw.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/p5/6dz05txn2_q7z9tdrqh6br140000gn/T/84d7185d8f8e2f00efa64590f708ad6620180317-5856-t8qraa.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/p5/6dz05txn2_q7z9tdrqh6br140000gn/T/84d7185d8f8e2f00efa64590f708ad6620180317-5856-t8qraa.jpg[0]'
+Command :: convert '/var/folders/p5/6dz05txn2_q7z9tdrqh6br140000gn/T/84d7185d8f8e2f00efa64590f708ad6620180317-5856-t8qraa.jpg[0]' -auto-orient -resize "300x300>" '/var/folders/p5/6dz05txn2_q7z9tdrqh6br140000gn/T/156f7e1821da11cf2489bb50aa7b6a9a20180317-5856-1z0kjv3'
+[paperclip] Trying to link /var/folders/p5/6dz05txn2_q7z9tdrqh6br140000gn/T/156f7e1821da11cf2489bb50aa7b6a9a20180317-5856-1z0kjv3 to /var/folders/p5/6dz05txn2_q7z9tdrqh6br140000gn/T/358c4975d67c2d44147822fafd57614220180317-5856-8wtkl0
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/p5/6dz05txn2_q7z9tdrqh6br140000gn/T/84d7185d8f8e2f00efa64590f708ad6620180317-5856-t8qraa.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/p5/6dz05txn2_q7z9tdrqh6br140000gn/T/84d7185d8f8e2f00efa64590f708ad6620180317-5856-t8qraa.jpg[0]'
+Command :: convert '/var/folders/p5/6dz05txn2_q7z9tdrqh6br140000gn/T/84d7185d8f8e2f00efa64590f708ad6620180317-5856-t8qraa.jpg[0]' -auto-orient -resize "100x100>" '/var/folders/p5/6dz05txn2_q7z9tdrqh6br140000gn/T/156f7e1821da11cf2489bb50aa7b6a9a20180317-5856-1nrxa4u'
+[paperclip] Trying to link /var/folders/p5/6dz05txn2_q7z9tdrqh6br140000gn/T/156f7e1821da11cf2489bb50aa7b6a9a20180317-5856-1nrxa4u to /var/folders/p5/6dz05txn2_q7z9tdrqh6br140000gn/T/8471f3a1b9134df8c459d1c5c9d7e48b20180317-5856-1vemw1y
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[paperclip] Trying to link /var/folders/p5/6dz05txn2_q7z9tdrqh6br140000gn/T/84d7185d8f8e2f00efa64590f708ad6620180317-5856-t8qraa.jpg to /var/folders/p5/6dz05txn2_q7z9tdrqh6br140000gn/T/84d7185d8f8e2f00efa64590f708ad6620180317-5856-1u3v8ej.jpg
+Command :: file -b --mime '/var/folders/p5/6dz05txn2_q7z9tdrqh6br140000gn/T/84d7185d8f8e2f00efa64590f708ad6620180317-5856-1u3v8ej.jpg'
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "products" SET "image_file_name" = ?, "image_content_type" = ?, "image_file_size" = ?, "image_updated_at" = ?, "updated_at" = ? WHERE "products"."id" = ?[0m  [["image_file_name", "car1.jpg"], ["image_content_type", "image/jpeg"], ["image_file_size", 95129], ["image_updated_at", "2018-03-17 19:07:22.933586"], ["updated_at", "2018-03-17 19:07:23.251549"], ["id", 5]]
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/products
+Completed 302 Found in 345ms (ActiveRecord: 4.6ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-03-17 14:07:23 -0500
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mVote Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "votes" WHERE "votes"."product_id" = ? AND "votes"."user_id" = 2 LIMIT ?[0m  [["product_id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."product_id" = ?[0m  [["product_id", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 1]]
+  [1m[36mVote Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "votes" WHERE "votes"."product_id" = ? AND "votes"."user_id" = 2 LIMIT ?[0m  [["product_id", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."product_id" = ?[0m  [["product_id", 3]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 3]]
+  [1m[36mVote Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "votes" WHERE "votes"."product_id" = ? AND "votes"."user_id" = 2 LIMIT ?[0m  [["product_id", 4], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."product_id" = ?[0m  [["product_id", 4]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 4]]
+  [1m[36mVote Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "votes" WHERE "votes"."product_id" = ? AND "votes"."user_id" = 2 LIMIT ?[0m  [["product_id", 5], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."product_id" = ?[0m  [["product_id", 5]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 5]]
+  Rendered products/index.html.erb within layouts/application (40.0ms)
+Completed 200 OK in 172ms (Views: 162.8ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/products/5" for 127.0.0.1 at 2018-03-17 14:08:52 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."product_id" = ?[0m  [["product_id", 5]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 5]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered products/show.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 125ms (Views: 113.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/products/5" for 127.0.0.1 at 2018-03-17 14:11:17 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mVote Load (0.6ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."product_id" = ?[0m  [["product_id", 5]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 5]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered products/show.html.erb within layouts/application (62.3ms)
+Completed 200 OK in 232ms (Views: 177.9ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-17 14:11:37 -0500
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mVote Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "votes" WHERE "votes"."product_id" = ? AND "votes"."user_id" = 2 LIMIT ?[0m  [["product_id", 1], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."product_id" = ?[0m  [["product_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 1]]
+  [1m[36mVote Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "votes" WHERE "votes"."product_id" = ? AND "votes"."user_id" = 2 LIMIT ?[0m  [["product_id", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."product_id" = ?[0m  [["product_id", 3]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 3]]
+  [1m[36mVote Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "votes" WHERE "votes"."product_id" = ? AND "votes"."user_id" = 2 LIMIT ?[0m  [["product_id", 4], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."product_id" = ?[0m  [["product_id", 4]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 4]]
+  [1m[36mVote Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "votes" WHERE "votes"."product_id" = ? AND "votes"."user_id" = 2 LIMIT ?[0m  [["product_id", 5], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."product_id" = ?[0m  [["product_id", 5]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 5]]
+  Rendered products/index.html.erb within layouts/application (27.7ms)
+Completed 200 OK in 113ms (Views: 100.7ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/products/3" for 127.0.0.1 at 2018-03-17 14:11:38 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."product_id" = ?[0m  [["product_id", 3]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 3]]
+  Rendered products/show.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 104ms (Views: 92.0ms | ActiveRecord: 1.2ms)
+
+
