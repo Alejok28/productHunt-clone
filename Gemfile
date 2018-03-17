@@ -21,7 +21,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'devise'
 gem 'annotate'
 gem "paperclip", "~> 5.2.1"
-gem 'aws-sdk', '~> 2.3'
+gem 'aws-sdk', '< 2.0'
 
 
 # Use CoffeeScript for .coffee assets and views
