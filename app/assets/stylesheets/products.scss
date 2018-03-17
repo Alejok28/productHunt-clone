@@ -54,6 +54,18 @@
       font-size: 18px;
       font-weight: bold;
     }
+
+    .actions {
+      margin-top: 30px;
+
+      a {
+        color: #ccc;
+        font-size: 21px;
+        margin-right: 5px;
+
+        &:hover { color: white; }
+      }
+    }
   }
 
   .votes {

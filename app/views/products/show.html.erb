@@ -3,6 +3,12 @@
     <h1><%= @product.name %></h1>
     <p><%= @product.description %></p>
     <a href="<%= @product.url %>" class="btn btn-primary btn-lg" target="_blank">¡Obtenlo!</a>
+    <% if user_signed_in? && @product.user == current_user %>
+    <div class="actions">
+      <%= link_to "<span class='glyphicon glyphicon-pencil'></span>".html_safe, edit_product_path(@product) %>
+      <%= link_to "<span class='glyphicon glyphicon-trash'></span>".html_safe, @product, method: :delete, data: { confirm: "¿Estás seguro de eliminar este producto?" } %>
+    </div>
+    <% end %>
   </header>
 
   <div class="container">
