@@ -51,7 +51,11 @@
       float: left;
       margin-right: 30px;
 
-      img { border-radius: 3px; }
+      img {
+        border-radius: 3px;
+        width: 100px;
+        height: 57px
+      }
     }
 
     .product-details {
