@@ -56,8 +56,10 @@
 
     .product-details {
       float: left;
+      width: 70%;
 
       .product-title a {
+        display: block;
         color: #303030;
         font-size: 21px;
         line-height: 1;
@@ -65,9 +67,10 @@
         &:hover, &:focus { color: #F04500; text-decoration: none; }
       }
       .product-description {
-        display: block;
+        width: 80%;
         color: #999;
         font-size: 16px;
+        text-align: justify;
       }
     }
 
@@ -87,11 +90,12 @@
 }
 .product-page {
   .product-header {
+
     background: #303030;
     color: #fafaf2;
     text-align: center;
     padding: 100px 25px;
-    margin-top: -20px;
+    margin-top: 0;
     margin-bottom: 30px;
 
     h1 {
