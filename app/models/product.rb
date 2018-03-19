@@ -30,4 +30,13 @@ class Product < ApplicationRecord
 	def voted_by?(user)
 	  votes.exists?(user: user)
 	end
+
+	def self.search(search)
+	  if search
+	    where('name LIKE ?', "%#{search}%").order('created_at DESC')
+	  else
+	    order('created_at DESC')
+	  end
+	end
+
 end
