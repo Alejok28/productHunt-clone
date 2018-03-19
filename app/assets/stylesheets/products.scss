@@ -113,7 +113,14 @@
 
     .actions {
       margin-top: 30px;
-
+      .social-share-button {
+        .ssb-icon {
+          margin: 10px;
+          background-size: 26px 26px;
+          height: 26px;
+          width: 26px;
+        }
+      }
       a {
         color: #ccc;
         font-size: 21px;

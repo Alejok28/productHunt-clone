@@ -7,6 +7,8 @@
     <div class="actions">
       <%= link_to "<span class='glyphicon glyphicon-pencil'></span>".html_safe, edit_product_path(@product) %>
       <%= link_to "<span class='glyphicon glyphicon-trash'></span>".html_safe, @product, method: :delete, data: { confirm: "¿Estás seguro de eliminar este producto?" } %>
+      <%= social_share_button_tag(@product.name) %>
+
     </div>
     <% end %>
   </header>

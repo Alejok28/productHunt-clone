@@ -6653,3 +6653,208 @@ Processing by ProductsController#index as HTML
 Completed 200 OK in 139ms (Views: 133.3ms | ActiveRecord: 2.5ms)
 
 
+Started GET "/products" for 127.0.0.1 at 2018-03-19 12:53:42 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVote Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "votes" WHERE "votes"."product_id" = ? AND "votes"."user_id" = 1 LIMIT ?[0m  [["product_id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."product_id" = ?[0m  [["product_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 1]]
+  [1m[36mVote Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "votes" WHERE "votes"."product_id" = ? AND "votes"."user_id" = 1 LIMIT ?[0m  [["product_id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."product_id" = ?[0m  [["product_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 2]]
+  Rendered products/index.html.erb within layouts/application (96.8ms)
+Completed 200 OK in 4903ms (Views: 4876.1ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2018-03-19 12:53:48 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered products/show.html.erb within layouts/application (17.1ms)
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+     7:     <div class="actions">
+     8:       <%= link_to "<span class='glyphicon glyphicon-pencil'></span>".html_safe, edit_product_path(@product) %>
+     9:       <%= link_to "<span class='glyphicon glyphicon-trash'></span>".html_safe, @product, method: :delete, data: { confirm: "¿Estás seguro de eliminar este producto?" } %>
+    10:       <%= social_share_button_tag(@post.title) %>
+    11: 
+    12:     </div>
+    13:     <% end %>
+  
+app/views/products/show.html.erb:10:in `_app_views_products_show_html_erb__1680064777988261576_70190770002000'
+Started GET "/products/1" for 127.0.0.1 at 2018-03-19 12:53:57 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered products/show.html.erb within layouts/application (14.4ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for #<Product:0x007fad20eca5e8>):
+     7:     <div class="actions">
+     8:       <%= link_to "<span class='glyphicon glyphicon-pencil'></span>".html_safe, edit_product_path(@product) %>
+     9:       <%= link_to "<span class='glyphicon glyphicon-trash'></span>".html_safe, @product, method: :delete, data: { confirm: "¿Estás seguro de eliminar este producto?" } %>
+    10:       <%= social_share_button_tag(@product.title) %>
+    11: 
+    12:     </div>
+    13:     <% end %>
+  
+app/views/products/show.html.erb:10:in `_app_views_products_show_html_erb__1680064777988261576_70190779222440'
+Started GET "/products/1" for 127.0.0.1 at 2018-03-19 12:54:10 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."product_id" = ?[0m  [["product_id", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 1]]
+  Rendered products/show.html.erb within layouts/application (48.9ms)
+Completed 200 OK in 152ms (Views: 146.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2018-03-19 12:55:23 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."product_id" = ?[0m  [["product_id", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 1]]
+  Rendered products/show.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 187ms (Views: 180.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2018-03-19 12:55:41 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."product_id" = ?[0m  [["product_id", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 1]]
+  Rendered products/show.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 110ms (Views: 105.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2018-03-19 12:58:29 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."product_id" = ?[0m  [["product_id", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 1]]
+  Rendered products/show.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 175ms (Views: 167.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2018-03-19 13:03:19 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."product_id" = ?[0m  [["product_id", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 1]]
+  Rendered products/show.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 2823ms (Views: 2818.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2018-03-19 13:03:37 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."product_id" = ?[0m  [["product_id", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 1]]
+  Rendered products/show.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 2833ms (Views: 2828.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2018-03-19 13:04:16 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."product_id" = ?[0m  [["product_id", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 1]]
+  Rendered products/show.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 2655ms (Views: 2649.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2018-03-19 13:04:35 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."product_id" = ?[0m  [["product_id", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 1]]
+  Rendered products/show.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 2719ms (Views: 2712.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2018-03-19 13:04:48 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."product_id" = ?[0m  [["product_id", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 1]]
+  Rendered products/show.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 2693ms (Views: 2687.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-19 13:05:18 -0500
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVote Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "votes" WHERE "votes"."product_id" = ? AND "votes"."user_id" = 1 LIMIT ?[0m  [["product_id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."product_id" = ?[0m  [["product_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 1]]
+  [1m[36mVote Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "votes" WHERE "votes"."product_id" = ? AND "votes"."user_id" = 1 LIMIT ?[0m  [["product_id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."product_id" = ?[0m  [["product_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 2]]
+  Rendered products/index.html.erb within layouts/application (29.7ms)
+Completed 200 OK in 195ms (Views: 185.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2018-03-19 13:05:20 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."product_id" = ?[0m  [["product_id", 2]]
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 2]]
+  Rendered products/show.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 124ms (Views: 114.5ms | ActiveRecord: 1.1ms)
+
+
